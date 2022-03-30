@@ -1,0 +1,67 @@
+//int my_strlen(char* s) { 8
+////
+////	int count{ 0 };
+////	while (s[count] != '\0')
+////		count++;
+////	return count;
+////}
+//
+//
+////char* my_strnset(char* s, char c, char n) { 10
+////	for (size_t i = 0; i < n; i++)
+////		s[i] = c;
+////	return s;
+////}
+//
+////int* temp = *first;
+////*first = *second;
+////*second = temp;
+////return;
+//
+//char* my_strcat(char* s1, char* s2) {
+//
+//	int count{ 0 };
+//	int count1{ 0 };
+//	int count2{ 0 };
+//
+//	while (s1[count] != '\0') {
+//		count++;
+//	}
+//	while (s2[count1] != '\0') {
+//		count1++;
+//	}
+//	
+//	for (size_t i = count; i < count + count1; i++) {
+//		s1[i] = s2[count2];
+//		s1[i + 1] = '\0';
+//		count2++;
+//	}
+//
+//	return s1;
+//}
+//
+//int main() {
+//
+//	setlocale(LC_ALL, "ru");
+//	//SetConsoleCP(1251);
+//	//SetConsoleOutputCP(1251);
+//
+//	const int BUFF_SIZE = 512;
+//	char* buffer = new char[BUFF_SIZE];
+//	char* buffer2 = new char[BUFF_SIZE];
+//
+//	cin.getline(buffer, BUFF_SIZE);
+//	cin.getline(buffer2, BUFF_SIZE);
+//
+//	cout << my_strcat(buffer, buffer2);
+//
+//	/*int answer = my_strlen(buffer); 8
+//	cout << answer << endl;
+//
+//	char* test = my_strnset(buffer , 'w' , 3); 10
+//	cout << "you text:" << buffer << endl;*/
+//
+//	delete[] buffer;
+//
+//
+//}
