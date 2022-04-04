@@ -1,0 +1,142 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+//struct Data {
+//	int year;
+//
+//};
+//
+//struct Auto {
+//	int wheels;
+//	float speed;
+//	char color;
+//	Data sozdanie;
+//};
+//
+//int main() {
+//
+//	Auto shkoda;
+//	shkoda.color = 'r';
+//	shkoda.speed = 315.23;
+//	shkoda.wheels = 4;
+//	shkoda.sozdanie.year = 1999;
+//	Auto audi = { 4 , 300.23 , 'b' };
+//	cout << "Audi speed =" << audi.speed << "\n " << "Shkoda year " << shkoda.sozdanie.year << endl;
+//
+//}
+
+
+//struct date
+//{
+//	int day;
+//	int month;
+//	int year;
+//};
+//
+//int gap(date one, date two)
+//{
+//	if (one.year == two.year)
+//	{
+//		if (one.month == two.month)
+//		{
+//			return (two.day - one.day);
+//		}
+//		else
+//		{
+//			return (two.day - one.day + 30);
+//		}
+//	}
+//	else
+//	{
+//		if (one.month == two.month)
+//		{
+//			return (two.day - one.day + 365);
+//		}
+//		else
+//		{
+//			return (two.day - one.day + 30 + 365);
+//		}
+//	}
+//}
+//
+//int main()
+//{
+//	struct date one = { 14, 4, 2004 };
+//	struct date two = { 24, 4, 2004 };
+//	std::cout << "Days between: " << gap(one, two) << std::endl;
+//}
+
+
+//struct times {
+//	int sec;
+//	int min;
+//	int hour;
+//};
+//
+//int time2 (times one, times two) {
+//
+//	
+//	if ((one.sec + 60 * (one.min) + 3600 * (one.hour)) > (two.sec + 60 * (two.min) + 3600 * (two.hour))) {
+//		if (one.hour == two.hour) {
+//			if (one.min == two.min) {
+//				return(one.sec - two.sec);
+//
+//			}
+//			else {
+//				return(one.sec - two.sec + 60);
+//			}
+//		}
+//		else
+//		{
+//			if (one.min == two.min)
+//			{
+//				return (two.sec - one.sec + 3600);
+//			}
+//			else
+//			{
+//				return (two.sec - one.sec + 60 + 3600);
+//			}
+//		}
+//
+//	}
+//	else {
+//		if (one.hour == two.hour) {
+//			if (one.min == two.min) {
+//				return(two.sec - one.sec);
+//
+//			}
+//			else {
+//				return(two.sec - one.sec + 60);
+//			}
+//		}
+//		else
+//		{
+//			if (one.min == two.min)
+//			{
+//				return (one.sec - two.sec + 3600);
+//			}
+//			else
+//			{
+//				return (one.sec - two.sec + 60 + 3600);
+//			}
+//		}
+//	}
+//}
+//
+//
+//int main() {
+//
+//	struct times one = { 43 , 58 , 20 };
+//	struct times two = { 43 , 56 , 20 };
+//
+//	cout << "sec:" << time2(one, two) << endl;
+//}
+
+
+
+struct table {
+
+};
