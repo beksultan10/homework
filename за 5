@@ -1,0 +1,94 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+
+#include <cstdlib>
+//
+//const int N = 5;      3 zad
+//int main() {
+//    int i, j, a[N][N], b = 0, c = 100, max, min, maxx, minn, tmp;
+//    for (i = 0; i < N; i++)
+//    {
+//        for (j = 0; j < N; j++)
+//        {
+//            a[i][j] = rand() % (c - b + 1) + b;
+//            if (!i && !j) {
+//                max = a[i][j];
+//                min = a[i][j];
+//                maxx = j;
+//                minn = j;
+//            }
+//            else if (a[i][j] > max) {
+//                max = a[i][j];
+//                maxx = j;
+//            }
+//            else if (a[i][j] < min) {
+//                min = a[i][j];
+//                minn = j;
+//            }
+//            cout << a[i][j] << "\t";
+//        }
+//        cout << endl;
+//    }
+//    cout << endl;
+//    for (i = 0; i < N; i++)
+//    {
+//        tmp = a[i][maxx];
+//        a[i][maxx] = a[i][minn];
+//        a[i][minn] = tmp;
+//    }
+//    for (i = 0; i < N; i++)
+//    {
+//        for (j = 0; j < N; j++)
+//            cout << a[i][j] << "\t";
+//        cout << endl;
+//    }
+//    return 0;
+//}
+
+
+//int main()    1 zad
+//{
+//    setlocale(LC_ALL, "Russian");
+//    int mas[3][4];
+//    int sum = 0;
+//    for (int i = 0; i < 3; i++)
+//    {
+//        for (int b = 0; b < 4; b++)
+//        {
+//            cin >> mas[i][b];
+//        }
+//    }
+//    for (int i = 0; i < 3; i++)
+//    {
+//        for (int b = 0; b < 4; b++)
+//        {
+//            cout << mas[i][b] << " ";
+//        }
+//    }
+//    cout << endl;
+//    for (int i = 0; i < 3; i++)
+//    {
+//        sum = 0;
+//        for (int b = 0; b < 4; b++)
+//        {
+//            sum += mas[i][b];
+//        }
+//        cout << sum << " ";
+//    }
+//    cout << endl; sum = 0;
+//    for (int i = 0; i < 4; i++)
+//    {
+//        sum = 0;
+//        for (int b = 0; b < 3; b++)
+//        {
+//            sum += mas[b][i];
+//        }
+//        cout << sum << " ";
+//    }
+//    //system("pause");
+//    return 0;
+//}
