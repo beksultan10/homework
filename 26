@@ -1,0 +1,73 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+//int main()  4 zad
+//{
+//	int* num1 = new int;
+//	int* num2 = new int;
+//	cin >> *num1 >> *num2;
+//	cout << (*num1 > *num2 ? *num1 : *num2);
+//
+//	delete num1;
+//	delete num2;
+//
+//	return 0;
+//}
+
+
+//int main() {  5 zad
+//
+//	int a1, b1, c1, d1;
+//	cin >> a1;
+//	cin >> b1;
+//	if (a1 != 10 && b1 != 10 && a1 / 2) {
+//
+//		c1 = a1 + b1;
+//		cout << c1 << endl;
+//	}
+//	else if( a1 == 10 && b1 == 10 ){
+//		d1 = a1 * b1 ;
+//		cout << d1 << endl;
+//	}
+//}
+
+
+//int main() {  6 zad
+//
+//	int a, b, c;
+//	cin >> a;
+//	cin >> b;
+//	cin >> c;
+//
+//	if (a > 10 && a / 3 && b > 10 && b / 3 && c > 10) {
+//		cout << "yes" << endl;
+//	}
+//	
+//	
+//	else {
+//		cout << "no" << endl;
+//	}
+//
+//}
+
+
+//int main() {    7 zad
+//
+//	int a, b, c;
+//	cin >> a;
+//	cin >> b;
+//	cin >> c;
+//
+//	if ( a == b && b==c && c == a) {
+//		cout << "yes" << endl;
+//	}
+//	
+//	
+//	else {
+//		cout << "no" << endl;
+//	}
+//
+//}
