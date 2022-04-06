@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+
+//int main()    1 zad
+//
+//{
+//    const int N = 4;
+//    int Array[N];
+//    int sum = 0;
+//
+//
+//    for (int i = 0; i < N; i++)
+//    {
+//        cout << "Your massive -" << i << " = ";
+//        cin >> Array[i];
+//    }
+//    int Max = Array[0], Min = Array[0];
+//    for (int i = 1; i < N; i++)
+//    {
+//        if (Max < Array[i])
+//            Max = Array[i];
+//        if (Min > Array[i])
+//            Min = Array[i];
+//    }
+//    cout << "Max: " << Max << endl;
+//    cout << "Min: " << Min << endl;
+//
+//    sum = Max + Min;
+//    cout << "Your summa of massive's elements is = " << sum << endl;
+//    return 0;
+//}
