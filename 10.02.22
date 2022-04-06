@@ -1,0 +1,90 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+
+//int Func(int n)  1 zad
+//{
+//	return n * n * n;
+//}
+//void main()
+//{
+//	int chislo = 0;
+//	cout << "Vvedite seloe 4islo\n";
+//	cin >> chislo;
+//	cout << "kub 4isla raven: " << Func(chislo);
+//	cout << endl;
+//	
+//
+//}
+
+//#include <cstdlib>  3 zad
+//
+//using namespace std;
+//bool odd(const int n);
+//int main()
+//{
+//    int n;
+//    cin >> n;
+//    cout << (odd(n) ? "TRUE" : "FALSE") << endl;
+//    system("pause");
+//    return 0;
+//}
+//
+//bool odd(const int n)
+//{
+//    return (n % 2 == 0);
+//}
+
+
+//int Figura(int x, int y)     5 zad
+//{
+//    for (int i = 0; i < x; i++)
+//    {
+//        for (int j = 0; j < y; j++)
+//        {
+//            if (i == 0 || i == x - 1 || j == 0 || j == y - 1)
+//            {
+//                cout << char(219);
+//            }
+//            else
+//            {
+//                cout << char(255);
+//            }
+//        }
+//        cout << endl;
+//    }
+//    return 0;
+//}
+//int main()
+//{
+//    setlocale(0, "RU");
+//    int N, K;
+//    cout << " Введите высоту " << endl;
+//    cin >> N;
+//    cout << " Введите ширину " << endl;
+//    cin >> K;
+//    setlocale(0, "C");
+//    
+//    Figura(N, K);
+//    system("pause"); 
+//    return 0;
+//}
+
+
+
+//long int factorial(int n) {       // факториал циклом   7 zad
+//    long int mult = 1;
+//    for (int i = n; i > 0; i--) {
+//        mult *= i;
+//    }
+//    return mult;
+//}
+//
+//int main() {
+//    for (int i = 0; i < 10; i++) {
+//        cout << i << "! = " << factorial(i) << endl;
+//    }
+//}
