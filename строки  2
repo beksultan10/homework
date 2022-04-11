@@ -1,0 +1,49 @@
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+struct srav {
+
+	int num;
+	char word;
+
+
+};
+
+
+int main() {
+
+	setlocale(LC_ALL, "Russian");
+
+	const char* cstr = "fhugfr r ruhbfu frhtffguh ufrughqiu ruthhtie";
+
+	
+	size_t podchet = strlen(cstr);
+	size_t schet{0};
+
+	char out[256]{ 0 };
+
+
+
+	const char* pre_position { cstr };           //nachalo
+	const char* position { strchr(cstr , ' ') }; // konec
+	while (position != nullptr) {
+
+
+		strncpy_s(out, pre_position, position - pre_position);
+		pre_position = position;
+		cout << out << endl;
+
+		schet++;
+		position = strchr(++position , ' ');
+	}
+	
+	cout << pre_position << endl;
+	cout << schet + 1;
+
+
+
+
+	return 0;
+}
