@@ -1,0 +1,159 @@
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+//class human   // class является пользовательским типом данных 
+//{
+//public:   // public является публичным которое могут менять
+//	int age;
+//	int weight;
+//	string name;
+//
+//	void print() {
+//		cout << "имя " << name << "\nвес " << weight << "\nвозраст " << age << endl << endl;
+//	}
+//};
+//
+//
+//
+//int main() {
+//
+//	setlocale(LC_ALL, "Russian");
+//	                           // human является типом переменной как тот же int .
+//	human firsthuman;          //firsthuman является объектом
+//	firsthuman.age = 30;
+//	firsthuman.name = "beks keks";
+//	firsthuman.weight = 67;
+//
+//	firsthuman.print();
+//
+//
+//	//cout << firsthuman.age << endl;
+//	//cout << firsthuman.name << endl;
+//	//cout << firsthuman.weight << endl;
+//
+//	//cout << "------------------------" << endl;
+//
+//	//human  secondhuman;        //secondhuman является объектом
+//	//
+//	//secondhuman.weight = 45;
+//	//secondhuman.age = 23;
+//	//secondhuman.name = "noname";
+//
+//	//cout << secondhuman.age << endl;
+//	//cout << secondhuman.weight << endl;
+//	//cout << secondhuman.name << endl;
+//
+//
+//
+//
+//	return 0;
+//}
+
+
+
+
+//#include <iostream>
+//using namespace std;
+//
+//class dnyxa
+//{
+//
+//private:
+//	int day;
+//	int month;
+//	int year;
+//
+//public:
+//	void message() {
+//		cout << "vash god rozhdeniya\n";
+//	}
+//
+//	void setData(int _day, int _month,int _year) {
+//	    
+//		day = _day;
+//		month = _month;
+//		year = _year;
+//	}
+//	void getData() {
+//		cout << "Data ->" << day << '.' << month << '.' << year << endl;
+//	}
+//
+//
+//
+//};
+//
+//int main() {
+//
+//	setlocale(LC_ALL, "Russian");
+//	int day;
+//	int month;
+//	int year;
+//
+//	cout << "введите свое рождение" << endl;
+//	cout << "день  "; cin >> day;
+//	cout << "месяц  "; cin >> month;
+//	cout << "год  "; cin >> year;
+//
+//	dnyxa data;
+//	data.message();
+//	data.setData(day , month , year);
+//	data.getData();
+//
+//
+//	return 0;
+//	
+//
+//}
+
+
+
+
+//#include <iostream>
+//#include <string.h>
+//
+//
+//class ab
+//{
+//public:
+//	ab(int A , int B) {
+//		a = A;
+//		b = B;
+//		cout << "a = " << a << endl;
+//		cout << "b = " << b << endl;
+//	}
+//	void setab() {
+//
+//		a = 12;
+//		b = 14;
+//
+//	}
+//	void getab() {
+//
+//		cout << "a = " << a << endl;
+//		cout << "b = " << b << endl << endl;
+//	}
+//
+//	~ab() {
+//
+//		cout << "здесь сработает деструктор" << endl;
+//	}
+//
+//private:
+//	int a;
+//	int b;
+//
+//};
+//
+//
+//int main() {
+//	setlocale(LC_ALL, "Russian");
+//	ab object(100 , 100);
+//	object.setab();
+//	object.getab();
+//	ab object_2(200, 200);
+//	
+//
+//	return 0;
+//}
