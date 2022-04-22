@@ -21,3 +21,33 @@ int main()
     
     
 }
+
+
+
+
+
+#include <iostream>
+#include "string.h"
+
+using namespace std;
+
+my_string f(my_string str) {
+    return str;
+}
+
+
+
+int main()
+{
+    setlocale( LC_ALL, "ru");
+
+    /*my_string test = f(str);
+    f(str);*/
+
+    my_string str("bekskeks");
+    cout << str.at(3) << endl;
+    str.pop_back();
+    
+    
+    
+}
