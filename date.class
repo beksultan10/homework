@@ -1,0 +1,115 @@
+#include "Date.h"
+#include <iostream>
+using namespace std;
+
+Date::Date()
+{
+	this->second = 0;
+}
+
+
+
+Date::Date(size_t d, size_t m, size_t y)
+{
+	this->second =  d * 86400 + m * 2592000 + y * 31104000;
+}
+
+bool Date::operator<(const Date& obj)
+{
+		return this->second < obj.second;
+}
+
+bool Date::operator>(const Date& obj)
+{
+	return this->second > obj.second;
+}
+
+bool Date::operator==(const Date& obj)
+{
+	return this->second == obj.second;
+}
+
+bool Date::operator!=(const Date& obj)
+{
+	return this->second != obj.second;
+}
+
+void Date::currentTime()
+{
+	cout << __DATE__ << " " << __TIME__ << endl;
+}
+
+void Date::show()
+{
+	size_t y, d, m;
+	y = this->second / 31104000;
+	m = this->second - (y * 31104000) / 2592000;
+	d = this->second - (y * 31104000 + m * 2592000);
+}
+
+bool Date::operator-(const Date& obj)
+{
+	return (this->second - obj.second) / 86400;
+}
+
+bool Date::operator+(const Date& obj)
+{
+	return this->second * 86400;
+}
+
+//void Date::systemTime()
+//{
+//	time_t seconds = time(NULL);
+//	tm* timeInfo = localtime(&seconds);
+//	seconds = timeInfo->tm_wday * day + timeInfo->tm_mon * month + timeInfo->tm_year * year;
+//}
+
+date.h
+#pragma once
+
+class Date
+{
+public:
+	Date();
+	Date(size_t d, size_t m , size_t y);
+	bool operator<(const Date& obj);
+	bool operator>(const Date& obj);
+	bool operator==(const Date& obj);
+	bool operator!=(const Date& obj);
+	void currentTime();
+	void show();
+	bool operator- (const Date& obj);
+	bool operator+ (const Date& obj);
+	void systemTime();
+private:
+	long long second;
+	size_t day = 86400;
+	size_t month = 259200;
+	size_t year = 31104000;
+};
+
+
+main.cpp
+#include <iostream>
+#include <string>
+#include "Date.h"
+
+using namespace std;
+
+
+
+int main() {
+	setlocale(LC_ALL, "Russian");
+
+	Date cur(14, 5, 2017);
+	Date bh(1, 2, 1999);
+
+	cout << "С вашего дня рождения прошло " << (cur - bh) << " дней\n";
+
+	//cur = cur + 5;
+	//cur += 5;
+
+ //   cur.show();	// 14.05.2017
+
+	//cin.get(); cin.get();
+}
