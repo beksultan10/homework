@@ -1,0 +1,169 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+//template <typename t>
+//t printArray(const t* array, int count)
+// {
+//	/*for (int ix = 0; ix < count; ix++)
+//		cout << array[ix] << "   ";
+//	cout << endl;*/
+//	t Max{ 0 };
+//	t Min{ 0 };
+//	for (int ix = 1; ix < count; ix++)
+//	{
+//		if (Max < array[ix])
+//			Max = array[ix];
+//		/*if (Min > array[ix])
+//			Min = array[ix];*/
+//	}
+//	return Max;
+//}
+//
+//template <typename t>
+//t printArr(const t* array, int count)
+//{
+//	/*for (int ix = 0; ix < count; ix++)
+//		cout << array[ix] << "   ";
+//	cout << endl;*/
+//	t Max{ 0 };
+//	t Min{ (t)INT_MAX };
+//	for (int ix = 1; ix < count; ix++)
+//	{
+//		/*if (Max < array[ix])
+//			Max = array[ix];*/
+//		if (Min > array[ix])
+//			Min = array[ix];
+//	}
+//	return Min;
+//}
+
+template <typename sort>
+sort funcsort(sort* array, int count) {
+	sort temp;
+	for (int i = 0; i < count - 1; i++)
+	{
+		for (int j = 0; j < count - i - 1; j++)
+		{
+			if (array[j] > array[j + 1])
+			{
+				temp = array[j];
+				array[j] = array[j + 1];
+				array[j + 1] = temp;
+			}
+		}
+	}
+
+	for (int i = 0; i < count; i++)
+	{
+		std::cout << array[i] << " ";
+	}
+	std::cout << std::endl;
+	return *array;
+}
+
+//template <typename T> 
+//T BinSearch(T* A[], T key, int low, int high)
+//{
+//	if (low > high)
+//	{
+//		cout << "ERROR!";
+//		return -1;
+//	};
+//	int mid = (low + high) / 2;
+//	if (A[mid] == key)
+//		return mid;
+//	if (A[mid] < key)
+//		BinSearch(A, key, mid + 1, high);
+//	if (A[mid] > key)
+//		BinSearch(A, key, low, mid - 1);
+//}
+
+int main()
+{
+	setlocale(LC_ALL, "RUSSIAN");
+
+	// размеры массивов
+	const int iSize = 10,
+		dSize = 7,
+		fSize = 10,
+		cSize = 5;
+
+	/*int max_int{ 0 };
+	int min_int{ 0 };*/
+	/*int int_temp{ 0 };*/
+
+	/*double max_double{ 0 };
+	double min_double{ 0 };*/
+	/*double double_temp{ 0 };*/
+
+
+	/*float max_float{ 0 };
+	float min_float{ 0 };*/
+	/*float float_temp{ 0 };*/
+
+
+	/*char max_char{ 0 };
+	char min_char{ 0 };*/
+	/*char char_temp{ 0 };*/
+
+	// массивы разных типов данных
+	/*int    iArray[iSize] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+	double dArray[dSize] = { 1.2345, 2.234, 3.57, 4.67876, 5.346, 6.1545, 7.7682 };
+	float  fArray[fSize] = { 1.34, 2.37, 3.23, 4.8, 5.879, 6.345, 73.434, 8.82, 9.33, 10.4 };
+	char   cArray[cSize] = { "MARS" };*/
+
+	int    iArray[iSize] = { 6, 4, 8, 5, 1, 7, 9, 10, 0, 3 };
+	double dArray[dSize] = { 4.67876, 7.7682, 3.57, 4.67876, 1.2345, 6.1545, 2.234 };
+	float  fArray[fSize] = { 5.879, 10.4,73.434, 4.8,  1.34, 6.345, 3.23, 8.82, 9.33, 2.37 };
+	char   cArray[cSize] = { "MARS" };
+
+
+	cout << "\t\tPattern of function of an output of an array on the screen\n\n";
+
+	// вызов локальной версии функции printArray для типа int через шаблон
+	//max_int = printArray(iArray, iSize);
+	//cout << max_int << endl;
+
+	//min_int = printArr(iArray, iSize);
+	//cout << min_int << endl;
+
+	
+
+	cout << funcsort(iArray, iSize) << endl;
+
+	// вызов локальной версии функции printArray для типа double через шаблон
+	/*max_double = printArray(dArray, dSize);
+	cout << max_double << endl;
+
+	min_double = printArr(dArray, dSize);
+	cout << min_double << endl;*/
+
+	cout << funcsort(dArray, dSize) << endl;
+
+
+
+	// вызов локальной версии функции printArray для типа float через шаблон
+	/*max_float =  printArray(fArray, fSize);
+	cout << max_float << endl;
+
+	min_float = printArr(fArray, fSize);
+	cout << min_float << endl;*/
+
+	cout << funcsort(fArray, fSize) << endl;
+
+
+	// вызов локальной версии функции printArray для типа char через шаблон
+	/*max_char = printArray(cArray, cSize);
+	cout << max_char << endl;
+
+	min_char = printArr(cArray, cSize);
+	cout << min_char << endl;*/
+
+	cout << funcsort(cArray, cSize) << endl;
+
+
+	return 0;
+
+}
