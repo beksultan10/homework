@@ -1,0 +1,137 @@
+song cpp
+#include "Song.h" 
+ 
+Song::Song() 
+{ 
+} 
+ 
+Song::Song(std::string lb, size_t vt) : label(lb), votes(vt) 
+{ 
+} 
+ 
+Song::Song(const char* str) 
+{ 
+ std::string word(str); 
+ auto len = word.find_first_of('\t'); 
+ this->label = word.substr(0, len); 
+ this->votes = std::stoi(word.substr(len + 1)); 
+} 
+ 
+std::string Song::get_label() 
+{ 
+ return this->label; 
+} 
+ 
+size_t Song::get_votes() 
+{ 
+ return this->votes; 
+} 
+ 
+void Song::add_vote() 
+{ 
+ this->votes++; 
+} 
+ 
+bool Song::operator<(const Song& obj) 
+{ 
+ return votes < obj.votes; 
+}
+song.h
+#pragma once 
+#include <string> 
+class Song 
+{ 
+private: 
+ std::string label; 
+ size_t votes; 
+public: 
+ Song(); 
+ Song(std::string lb, size_t vt); 
+ Song(const char* str); 
+ std::string get_label(); 
+ size_t get_votes(); 
+ void add_vote(); 
+ bool operator<(const Song& obj); 
+};
+statistic.cpp
+#include "Statistic.h" 
+ 
+Statistic::Statistic() 
+{ 
+} 
+ 
+Statistic::Statistic(Song obj) 
+{ 
+ if (obj.get_votes() == 0) 
+  return; 
+ for (auto it = chart.begin(); it != chart.end(); it++) 
+ { 
+  if ((*it).get_label() == obj.get_label()) 
+  { 
+   (*it).add_vote(); 
+   return; 
+  } 
+ } 
+ chart.push_back(obj); 
+} 
+ 
+void Statistic::add_song(Song obj) 
+{ 
+ if (obj.get_votes() == 0) 
+  return; 
+ for (auto it = chart.begin(); it != chart.end(); it++) 
+ { 
+  if ((*it).get_label() == obj.get_label()) 
+  { 
+   (*it).add_vote(); 
+   return; 
+  } 
+ } 
+ chart.push_back(obj); 
+} 
+ 
+void Statistic::sort() 
+{ 
+ chart.sort(); 
+}
+statistic.h
+#pragma once 
+#include <list> 
+#include "Song.h" 
+class Statistic 
+{ 
+private: 
+ std::list<Song> chart; 
+public: 
+ Statistic(); 
+ Statistic(Song obj); 
+ void add_song(Song obj); 
+ void sort(); 
+};
+console cpp
+#include <iostream> 
+#include "Song.h" 
+#include "Statistic.h" 
+ 
+using namespace std; 
+ 
+int main() 
+{ 
+ Statistic billboard; 
+ std::string plan[] = {"All of me", "Riptide", "Counting stars", "Hall of fame"}; 
+ size_t request_num; 
+ std::cout << "How many requests sent? "; 
+ std::cin >> request_num; 
+ for (auto i = 0; i < request_num; i++) 
+ { 
+  for (auto elem : plan) 
+  { 
+   bool option; 
+   char song_request; 
+   std::cout << elem << "\t"; 
+   std::cin >> option; 
+   std::getline(std::cin, song_request); 
+   billboard.add_song(Song()); 
+  } 
+ } 
+}
